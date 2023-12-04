@@ -11,6 +11,12 @@ jobs:
     - name: Setup MSBuild.exe
       uses: microsoft/setup-msbuild@v1.3.1
 
+    - name: Setup Nuget
+      uses: NuGet/setup-nuget@v1.2.0
+
+    - name: Restore nuget packages
+      run: nuget restore AtsExCsTemplate.sln
+
     - name: MSBuild
       run: msbuild AtsExCsTemplate.sln -property:Configuration=Release -p:OutDir="out/"
       shell: cmd
