@@ -35,4 +35,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: build-result
-        path: ./msbuild_actions_sample/out/
+        path: ./out/
