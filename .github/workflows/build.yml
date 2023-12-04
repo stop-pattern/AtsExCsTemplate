@@ -12,7 +12,7 @@ jobs:
       uses: microsoft/setup-msbuild@v1.3.1
 
     - name: MSBuild
-      run: msbuild *.sln -property:Configuration=Release -p:OutDir="out/"
+      run: msbuild AtsExCsTemplate.sln -property:Configuration=Release -p:OutDir="out/"
       shell: cmd
 
     - name: Check dir
