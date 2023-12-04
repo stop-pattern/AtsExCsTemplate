@@ -35,15 +35,6 @@ AtsEXを使ったBve5またはBve6用プラグインのテンプレート
         - Lib.Harmony (>= 2.2.2)
 
 
-[AtsEX](https://github.com/automatic9045/AtsEX)
-    - [ver1.0-RC3 - v1.0.31118.2](https://github.com/automatic9045/AtsEX/releases/tag/v1.0.31118.2)
-- Win10 22H2(更新してないけど23H2でも動くはず)
-    - Visual Studio 2022
-        - Microsoft Visual Studio Community 2022 (64 ビット) - Current Version 17.5.3
-- [Bve](https://bvets.net/)
-    - BVE Trainsim Version 6.0.7554.619
-
-
 ## 使い方
 1. Use this template から新しくリポジトリを作成する
 1. 自分の作りたい機能に合わせて設定する
