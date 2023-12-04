@@ -1,0 +1,2 @@
+# AtsEXcsTemplate
+AtsEXを使ったBve5またはBve6用プラグインのテンプレート
