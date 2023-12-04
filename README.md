@@ -12,7 +12,7 @@ AtsEXを使ったBve5またはBve6用プラグインのテンプレート
     - 車両プラグイン
     - 拡張機能
 - コードチェック
-- ciでのdll自動生成
+- Actionsでのdll自動生成
 
 
 ## 動作環境
@@ -46,12 +46,12 @@ AtsEXを使ったBve5またはBve6用プラグインのテンプレート
 1. AtsExCsTemplate.csproj を開いてすべて保存から適当な場所にslnを生成する
 1. NuGetからAtsEx関連のライブラリを入れる（ビルドすれば勝手に入る）
 1. 開発するプラグインの種類に応じて要らないファイルを削除する
-    - MapPlugin.cs
-        - マッププラグイン用のソースコード
-    - VehiclePlugin.cs
-        - 車両プラグイン用のソースコード
-    - Extension.cs
-        - 拡張機能用のソースコード
+    - MapPlugin/
+        - マッププラグイン用のプロジェクト
+    - VehiclePlugin/
+        - 車両プラグイン用のプロジェクト
+    - Extension/
+        - 拡張機能用のプロジェクト
 
 #### 0.2. プラグイン情報の設定
 **Properties/AssemblyInfo.cs**
