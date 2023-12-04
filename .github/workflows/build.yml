@@ -18,7 +18,7 @@ jobs:
       run: nuget restore AtsExCsTemplate.sln
 
     - name: MSBuild
-      run: msbuild AtsExCsTemplate.sln /p:platform="Any CPU" /p:configuration="Release"
+      run: msbuild AtsExCsTemplate.sln /p:platform="Any CPU" /p:configuration="Release" /p:DebugSymbols=false
       shell: cmd
 
     - name: Check dir
