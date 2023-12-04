@@ -21,11 +21,7 @@ jobs:
       run: msbuild AtsExCsTemplate.sln /p:platform="Any CPU" /p:configuration="Release" /p:DebugSymbols=false
       shell: cmd
 
-    - name: Check dir
-      run: tree /f
-      shell: cmd
-
-    - name: Move artifact
+    - name: Serch and move artifact
       run: |
         ls -alR
         mkdir out/
@@ -35,5 +31,5 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
-        name: build-result
+        name: plugins
         path: ./out/
