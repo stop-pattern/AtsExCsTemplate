@@ -1,0 +1,26 @@
+name: MSBuild
+on: push
+jobs:
+  build:
+    name: MSBuild
+    runs-on: windows-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup MSBuild.exe
+      uses: microsoft/setup-msbuild@v1.3.1
+
+    - name: MSBuild
+      run: msbuild *.sln -property:Configuration=Release -p:OutDir="out/"
+      shell: cmd
+
+    - name: Check dir
+      run: tree /f
+      shell: cmd
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: build-result
+        path: ./msbuild_actions_sample/out/
