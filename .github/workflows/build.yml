@@ -25,10 +25,10 @@ jobs:
       run: tree /f
       shell: cmd
 
-    - name: serch artifact
+    - name: Move artifact
       run: |
-        find . -type f -name '*.csproj' | sed -E 's/.*\/(.+).csproj/\1/'
-        ls -al
+        mkdir out/
+        find . -type f -name '*.pdb' | sed -E 's/(.*\/.+).pdb/\1.dll/' | xargs mv -t ./out/
       shell: bash
 
     - name: Upload artifact
