@@ -27,6 +27,7 @@ jobs:
 
     - name: Move artifact
       run: |
+        ls -alR
         mkdir out/
         find . -type f -name '*.pdb' | sed -E 's/(.*\/.+).pdb/\1.dll/' | xargs mv -t ./out/
       shell: bash
