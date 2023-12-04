@@ -18,7 +18,7 @@ AtsEXを使ったBve5またはBve6用プラグインのテンプレート
 ## 動作環境
 - [AtsEX](https://github.com/automatic9045/AtsEX)
     - [ver1.0-RC3 - v1.0.31118.2](https://github.com/automatic9045/AtsEX/releases/tag/v1.0.31118.2)
-- Win10 22H2(更新してないけど23H2でも動くはず)
+- Win10 22H2
     - Visual Studio 2022
         - Microsoft Visual Studio Community 2022 (64 ビット) - Current Version 17.5.3
 - [Bve](https://bvets.net/)
