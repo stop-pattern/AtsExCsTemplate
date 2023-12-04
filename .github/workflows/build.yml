@@ -25,6 +25,12 @@ jobs:
       run: tree /f
       shell: cmd
 
+    - name: serch artifact
+      run: |
+        find . -type f -name '*.csproj' | sed -E 's/.*\/(.+).csproj/\1/'
+        ls -al
+      shell: bash
+
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
