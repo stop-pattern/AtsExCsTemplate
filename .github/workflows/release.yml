@@ -43,6 +43,6 @@ jobs:
       - name: Download a Build Artifact
         uses: actions/download-artifact@v3.0.2
       - name: check dir
-        run: ls -al
+        run: ls -alR
       - name: Checkout repository
         uses: actions/checkout@v4
