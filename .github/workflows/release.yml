@@ -29,6 +29,13 @@ jobs:
           mkdir plugins/
           find . -type f -path '*/out/*.dll' | xargs mv -t ./plugins/
         shell: bash
+      - name: Check assembly version
+        run: |
+          Get-ChildItem -Recurse -Filter "*.dll" | foreach {
+          Write-Output $_.FullName
+          (Get-Item $_.FullName).VersionInfo.Comments
+          }
+        shell: pwsh
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
@@ -43,6 +50,8 @@ jobs:
       - name: Download a Build Artifact
         uses: actions/download-artifact@v3.0.2
       - name: check dir
-        run: ls -alR
+        run: |
+           ls -alR
+           find plugins/ -name '*.dll' | xargs -i exiftool -FileVersion -ProductVersion {}
       - name: Checkout repository
         uses: actions/checkout@v4
