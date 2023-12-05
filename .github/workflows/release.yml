@@ -49,6 +49,10 @@ jobs:
     steps:
       - name: Download a Build Artifact
         uses: actions/download-artifact@v3.0.2
+      - name: install exiftool
+        run: |
+           sudo apt update
+           sudo apt install exiftool
       - name: check dir
         run: |
            ls -alR
