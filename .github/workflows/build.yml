@@ -6,9 +6,10 @@ on:
       #- main
       - develop
     paths:
-      - '**'
-      - '!./'
-      - '!.github/'
+      - '*/**'
+      - '!./*'
+      - './*.sln'
+      - '!.github/**'
 
 jobs:
   build:
