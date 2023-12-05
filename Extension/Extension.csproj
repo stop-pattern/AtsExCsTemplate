@@ -33,27 +33,35 @@
   <ItemGroup>
     <Reference Include="0Harmony, Version=2.2.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Lib.Harmony.2.2.2\lib\net48\0Harmony.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="AtsEx.CoreExtensions, Version=0.17.30127.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\AtsEx.CoreExtensions.0.19.0\lib\AtsEx.CoreExtensions.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="AtsEx.PluginHost, Version=0.19.30520.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\AtsEx.PluginHost.0.19.0\lib\AtsEx.PluginHost.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="BveTypes, Version=0.19.30520.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\AtsEx.PluginHost.0.19.0\lib\BveTypes.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="FastCaching, Version=0.17.30125.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\AtsEx.PluginHost.0.19.0\lib\FastCaching.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="FastMember, Version=0.17.21224.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\AtsEx.PluginHost.0.19.0\lib\FastMember.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="ObjectiveHarmonyPatch, Version=1.0.30529.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ObjectiveHarmonyPatch.1.0.0\lib\ObjectiveHarmonyPatch.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="SlimDX, Version=4.0.13.43, Culture=neutral, PublicKeyToken=b1b0c32fd1ffe4f9, processorArchitecture=x86">
       <HintPath>..\packages\SlimDX.4.0.13.44\lib\NET40\SlimDX.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -65,9 +73,11 @@
     <Reference Include="System.Xml" />
     <Reference Include="TypeWrapping, Version=0.17.30127.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\AtsEx.PluginHost.0.19.0\lib\TypeWrapping.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnembeddedResources, Version=1.0.30529.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\UnembeddedResources.1.0.0\lib\UnembeddedResources.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
