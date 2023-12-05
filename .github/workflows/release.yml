@@ -53,9 +53,15 @@ jobs:
         run: |
            sudo apt update
            sudo apt install exiftool
-      - name: Check dir
+      - name: Check ver
         run: |
            ls -alR
            find plugins/ -name '*.dll' | xargs -i exiftool -FileVersion -ProductVersion {}
+      - name: Check versions
+        run: |
+          for file in `find plugins/ -name '*.dll'`; do
+            readlink $file
+            exiftool -FileVersion -ProductVersion $file
+          done
       - name: Checkout repository
         uses: actions/checkout@v4
