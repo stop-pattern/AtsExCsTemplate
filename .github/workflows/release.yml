@@ -31,7 +31,7 @@ jobs:
         shell: bash
       - name: Check assembly version
         run: |
-          Get-ChildItem plugins/ -Recurse -Filter "*.dll" | foreach { (Get-Item $_.FullName).VersionInfo.Comments }
+          Get-ChildItem plugins/ -Recurse -Filter "*.dll" | foreach { (Get-Item $_.FullName).VersionInfo.FileVersion }
         shell: pwsh
       - name: Upload artifact
         uses: actions/upload-artifact@v3
