@@ -37,12 +37,32 @@
 
 ## 使い方
 1. Use this template から新しくリポジトリを作成する
+1. githubリポジトリの詳細を設定する
+2. LICENSEの著作権表記を変更する
 1. 自分の作りたい機能に合わせて設定する
 1. コードを書く
 1. リリースする
 
 ### 0. 下準備
-#### 0.1. Visual Studio でビルドできる状態にする
+#### 0.1. テンプレートから新しくリポジトリを作成して設定する
+1. `Use this template`ボタンから新しいリポジトリの作成画面に入る
+    - `Create a new repository`で新しくリポジトリを作成する
+    - リポジトリの名前はお好みで
+    - Description にプラグインの概要とかを書いておくといい
+1. リポジトリの設定画面でDescriptionやTopicsを設定する
+1. LICENSEの著作権表記を変更する
+1. README.md を消した後 README_TEMPLATE.md を README.md にリネームしてtodoを埋める
+
+#### 0.2. ローカルにクローンする
+1. `< > Code`からURLをコピーする
+1. Visual Studio を開いて リポジトリのクローン からコピーしたURLでローカルにクローンする
+
+できないときとかは下のコマンドでできる
+```bash
+git clone https://github.com/USERNAME/REPONAME.git
+```
+
+#### 0.3. Visual Studio でビルドできる状態にする
 1. AtsExCsTemplate.csproj を開いてすべて保存から適当な場所にslnを生成する
 1. NuGetからAtsEx関連のライブラリを入れる（ビルドすれば勝手に入る）
 1. 開発するプラグインの種類に応じて要らないファイルを削除する
@@ -53,7 +73,7 @@
     - Extension/
         - 拡張機能用のプロジェクト
 
-#### 0.2. プラグイン情報の設定
+#### 0.4. プラグイン情報の設定
 **Properties/AssemblyInfo.cs**
 BveからAtsExのバージョン情報を見たときに表示される内容を設定できます
 AtsExのバージョン情報画面から見えるのはファイル名と下の3項目です
@@ -68,7 +88,12 @@ AtsExのバージョン情報画面から見えるのはファイル名と下の
 ### 1. コードを書く
 頑張ってゴリゴリ書きましょう
 
-### 2. 公開する
+### 2. ドキュメントを書く
+1. githubリポジトリの詳細を設定する
+1. LICENSEの著作権表記を変更する
+1. README.md を消した後 README_TEMPLATE.md を README.md にリネームしてtodoを埋める
+
+### 3. 公開する
 公開ができる状態になったらmainにpushしてtag打ってreleaseを作りましょう
 <!-- tagを打つとciが走って自動でreleaseが作られビルド生成物が添付されます -->
 
