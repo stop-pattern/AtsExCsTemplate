@@ -56,9 +56,6 @@ jobs:
            find plugins/ -name '*.dll' | xargs -i exiftool -FileVersion -ProductVersion {}
       - name: Check versions
         run: |
-          for file in `find plugins/ -name '*.dll'`; do
-            readlink $file
-            exiftool -FileVersion -ProductVersion $file
-          done
+          for file in `find plugins/ -name '*.dll'`; do readlink $file; exiftool -FileVersion -ProductVersion $file; done
       - name: Checkout repository
         uses: actions/checkout@v4
