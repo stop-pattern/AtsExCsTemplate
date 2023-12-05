@@ -31,7 +31,7 @@ jobs:
         shell: bash
       - name: Check assembly version
         run: |
-          Get-ChildItem -Recurse -Filter "*.dll" | foreach {
+          Get-ChildItem plugins/ -Recurse -Filter "*.dll" | foreach {
           Write-Output $_.FullName
           (Get-Item $_.FullName).VersionInfo.Comments
           }
