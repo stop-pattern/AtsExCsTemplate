@@ -12,6 +12,9 @@ jobs:
   build:
     name: Generate dll
     runs-on: windows-latest
+    outputs:
+      dllName: ${{ steps.version.outputs.name }}
+      dllVersion: ${{ steps.version.outputs.version }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -30,10 +33,13 @@ jobs:
           find . -type f -path '*/out/*.dll' | xargs mv -t ./plugins/
         shell: bash
       - name: Check assembly version
+        id: version
         run: |
           Get-ChildItem plugins/ -Recurse -Filter "*.dll" | foreach {
           Write-Output $_.FullName
+          echo "::set-output name=name::$_"
           (Get-Item $_.FullName).VersionInfo.FileVersion
+          echo "::set-output name=version::(Get-Item $_.FullName).VersionInfo.FileVersion"
           }
         shell: pwsh
       - name: Upload artifact
@@ -62,5 +68,8 @@ jobs:
            find plugins/ -name '*.dll | xargs readlink
            find plugins/ -name '*.dll | xargs -i exiftool -FileVersion -ProductVersion {}
           #for file in `find plugins/ -name '*.dll'`; do readlink $file; exiftool -FileVersion -ProductVersion $file; done
+      - name: Check outputs
+        run: |
+           echo ${{needs.build.outputs.dllName}}: ${{needs.build.outputs.dllVersion}}
       - name: Checkout repository
         uses: actions/checkout@v4
