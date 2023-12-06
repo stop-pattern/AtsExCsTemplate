@@ -70,6 +70,6 @@ jobs:
           #for file in `find plugins/ -name '*.dll'`; do readlink $file; exiftool -FileVersion -ProductVersion $file; done
       - name: Check outputs
         run: |
-           echo ${{needs.build.outputs.dllName}}: ${{needs.build.outputs.dllVersion}}
+           echo ${{needs.build.outputs.dllName}}
       - name: Checkout repository
         uses: actions/checkout@v4
