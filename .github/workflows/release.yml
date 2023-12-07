@@ -35,7 +35,7 @@ jobs:
       - name: Check assembly version
         id: version
         run: |
-          Get-ChildItem plugins/ -Recurse -Filter "*.dll" | foreach {
+          Get-ChildItem plugins/ -Recurse -Filter "*.dll" -Name | foreach {
           Write-Output $_
           echo "::set-output name=name::$_"
           $ver=(Get-Item $_.FullName).VersionInfo.FileVersion
