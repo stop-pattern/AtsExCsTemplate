@@ -49,40 +49,11 @@ jobs:
         with:
           name: plugins
           path: ./plugins/
-  tag:
-    name: Create tag
-    runs-on: ubuntu-latest
-    needs: build
-    #if: github.event.pull_request.merged == true && startsWith(github.event.pull_request.head.ref, 'release/')
-    steps:
-      - name: Download a Build Artifact
-        uses: actions/download-artifact@v3.0.2
-      - name: Install exiftool
-        run: |
-           sudo apt update
-           sudo apt install exiftool
-      - name: Check ver
-        run: |
-           ls -alR
-           find plugins/ -name '*.dll' | xargs -i exiftool -FileVersion -ProductVersion {}
-      - name: Check versions
-        run: |
-           find plugins/ -name '*.dll | xargs readlink
-           find plugins/ -name '*.dll | xargs -i exiftool -FileVersion -ProductVersion {}
-          #for file in `find plugins/ -name '*.dll'`; do readlink $file; exiftool -FileVersion -ProductVersion $file; done
-      - name: Check outputs
-        run: |
-           echo ${{needs.build.outputs.name}}
-           echo ${{needs.build.outputs.version}}
-      - name: Checkout repository
-        uses: actions/checkout@v4
 
   release:
     name: Create release
     runs-on: ubuntu-latest
-    needs:
-      - build
-      - tag
+    needs: build
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
