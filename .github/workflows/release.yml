@@ -15,8 +15,8 @@ jobs:
     name: Generate dll
     runs-on: windows-latest
     outputs:
-      dllName: ${{ steps.version.outputs.name }}
-      dllVersion: ${{ steps.version.outputs.version }}
+      NAME: ${{ steps.version.outputs.name }}
+      VERSION: ${{ steps.version.outputs.version }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -41,11 +41,11 @@ jobs:
           Write-Output $_.FileName
           $_.FileName
           #echo "::set-output name=name::$_"
-          echo "NAME=$_" >> $GITHUB_OUTPUT
+          echo "name=$_" >> $GITHUB_OUTPUT
           $ver=(Get-Item $_.FullName).VersionInfo.FileVersion
           $ver
-          echo "::set-output name=version::$ver"
-          echo "VERSION=$ver" >> $GITHUB_OUTPUT
+          #echo "::set-output name=version::$ver"
+          echo "=v$ver" >> $GITHUB_OUTPUT
           }
         shell: pwsh
       - name: Upload artifact
@@ -76,8 +76,7 @@ jobs:
           #for file in `find plugins/ -name '*.dll'`; do readlink $file; exiftool -FileVersion -ProductVersion $file; done
       - name: Check outputs
         run: |
-           echo ${{needs.build.outputs.dllName}}
-           echo ${{needs.build.outputs.dllVersion}}
-           echo ${{env.VERSION}}
+           echo ${{needs.build.outputs.NAME}}
+           echo ${{needs.build.outputs.VERSION}}
       - name: Checkout repository
         uses: actions/checkout@v4
