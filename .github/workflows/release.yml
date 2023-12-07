@@ -40,12 +40,12 @@ jobs:
           Get-ChildItem plugins/ -Recurse -Filter "*.dll" -File | foreach {
           Write-Output $_.FileName
           $_.FileName
-          echo "::set-output name=name::$_"
+          #echo "::set-output name=name::$_"
           echo "NAME=$_" >> $GITHUB_OUTPUT
           $ver=(Get-Item $_.FullName).VersionInfo.FileVersion
           $ver
           echo "::set-output name=version::$ver"
-          echo "VERSION=$ver" >> $GITHUB_ENV
+          echo "VERSION=$ver" >> $GITHUB_OUTPUT
           }
         shell: pwsh
       - name: Upload artifact
