@@ -71,7 +71,10 @@ jobs:
            find plugins/ -name '*.dll | xargs -i exiftool -FileVersion -ProductVersion {}
           #for file in `find plugins/ -name '*.dll'`; do readlink $file; exiftool -FileVersion -ProductVersion $file; done
       - name: Check outputs
+        env:
+          DLLNAME: ${{jobs.build.outputs.dllVersion}}
         run: |
+           echo $DLLNAME
            echo ${{needs.build.outputs.dllName}}
            echo ${{needs.build.outputs.dllVersion}}
       - name: Checkout repository
