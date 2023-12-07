@@ -89,7 +89,7 @@ jobs:
       - name: Create tag
         run: |
            git tag ${{needs.build.outputs.version}}
-           git push
+           git push origin ${{needs.build.outputs.version}}
       - name: Create release draft
         id: create-draft
         uses: release-drafter/release-drafter@v5.12.1
