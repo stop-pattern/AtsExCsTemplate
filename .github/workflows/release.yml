@@ -43,7 +43,7 @@ jobs:
           $ver=(Get-Item $_.FullName).VersionInfo.FileVersion
           $ver
           #echo "::set-output name=version::$ver"
-          "version=v$ver" Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          "version=v$ver" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
           }
         shell: pwsh
       - name: Upload artifact
