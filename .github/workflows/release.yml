@@ -38,10 +38,12 @@ jobs:
           Get-ChildItem plugins/ -Recurse -Filter "*.dll" -File | foreach {
           Write-Output $_.FileName
           $_.FileName
-          echo "name=$_" >> $GITHUB_OUTPUT
+          echo "::set-output name=name::$_"
+          #echo "name=$_" >> $GITHUB_OUTPUT
           $ver=(Get-Item $_.FullName).VersionInfo.FileVersion
           $ver
-          echo "version=$ver" >> $GITHUB_OUTPUT
+          echo "::set-output name=version::$ver"
+          #echo "version=$ver" >> $GITHUB_OUTPUT
           }
         shell: pwsh
       - name: Upload artifact
@@ -71,10 +73,7 @@ jobs:
            find plugins/ -name '*.dll | xargs -i exiftool -FileVersion -ProductVersion {}
           #for file in `find plugins/ -name '*.dll'`; do readlink $file; exiftool -FileVersion -ProductVersion $file; done
       - name: Check outputs
-        env:
-          DLLNAME: ${{jobs.build.outputs.dllVersion}}
         run: |
-           echo $DLLNAME
            echo ${{needs.build.outputs.dllName}}
            echo ${{needs.build.outputs.dllVersion}}
       - name: Checkout repository
