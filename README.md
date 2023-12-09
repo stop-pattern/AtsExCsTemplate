@@ -1,10 +1,11 @@
 # AtsExCsTemplate
 [AtsEX](https://github.com/automatic9045/AtsEX)を使ったBve5またはBve6用のプラグインのためのテンプレート
 
+## プラグイン開発が初めての人へ
+~全然クイックじゃない~[クイックスタート](wiki/クイックスタート)から取り掛かるのがおすすめです
 
 ## ライセンス
 [MIT](LICENSE)
-
 
 ## このテンプレートの機能
 - 取っ掛かりやすいように3種類のプラグインのファイル
@@ -12,8 +13,6 @@
     - 車両プラグイン
     - 拡張機能
 - Actionsでのdll自動生成
-<!-- - コードチェック -->
-
 
 ## 動作環境
 - [AtsEX](https://github.com/automatic9045/AtsEX)
