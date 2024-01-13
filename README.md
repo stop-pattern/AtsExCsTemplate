@@ -17,8 +17,8 @@
 
 ## 動作環境
 - [AtsEX](https://github.com/automatic9045/AtsEX)
-    - [ver1.0-RC3 - v1.0.31118.2](https://github.com/automatic9045/AtsEX/releases/tag/v1.0.31118.2)
-- Win10 22H2
+    - [ver1.0-RC5 - v1.0.40101.1](https://github.com/automatic9045/AtsEX/releases/tag/v1.0.40101.1) or later
+- Win10 22H2, Win11 22H2 or later
     - Visual Studio 2022
         - Microsoft Visual Studio Community 2022 (64 ビット) - Current Version 17.5.3
 - [Bve](https://bvets.net/)
@@ -26,13 +26,11 @@
 
 
 ## 依存環境
-- AtsEx.CoreExtensions (0.19.0)
-    - AtsEx.PluginHost (>= 1.0.0-rc1)
-        - Lib.Harmony (>= 2.2.2)
-        - SlimDX (>= 4.0.13.44)
-        - UnembeddedResources (>= 1.0.0)
-    - ObjectiveHarmonyPatch (>= 1.0.0)
-        - Lib.Harmony (>= 2.2.2)
+
+- AtsEx.CoreExtensions (1.0.0-rc5)
+- AtsEx.PluginHost (1.0.0-rc1)
+
+間接参照を含めたすべての依存情報については、各プロジェクトのフォルダにある `packages.lock.json` をご確認ください。
 
 
 ## 使い方
