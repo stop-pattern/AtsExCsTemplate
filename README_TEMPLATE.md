@@ -191,13 +191,13 @@
     - BVE Trainsim Version 5.8.7554.391 or later
     - BVE Trainsim Version 6.0.7554.619 or later
 - [AtsEX](https://github.com/automatic9045/AtsEX)
-    - [ver1.0-RC3 - v1.0.31118.2](https://github.com/automatic9045/AtsEX/releases/tag/v1.0.31118.2) or later
+    - [ver1.0-RC5 - v1.0.40101.1](https://github.com/automatic9045/AtsEX/releases/tag/v1.0.40101.1) or later
 
 
 ## 開発環境
 **Todo: 開発環境を必要に応じて変更**
 - [AtsEX](https://github.com/automatic9045/AtsEX)
-    - [ver1.0-RC3 - v1.0.31118.2](https://github.com/automatic9045/AtsEX/releases/tag/v1.0.31118.2)
+    - [ver1.0-RC5 - v1.0.40101.1](https://github.com/automatic9045/AtsEX/releases/tag/v1.0.40101.1)
 - Win10 22H2
     - Visual Studio 2022
         - Microsoft Visual Studio Community 2022 (64 ビット) - Current Version 17.5.3
@@ -208,11 +208,8 @@
 
 ## 依存環境
 **Todo: 依存環境を必要に応じて変更**
-- AtsEx.CoreExtensions (0.19.0)
-    - AtsEx.PluginHost (>= 1.0.0-rc1)
-        - Lib.Harmony (>= 2.2.2)
-        - SlimDX (>= 4.0.13.44)
-        - UnembeddedResources (>= 1.0.0)
-    - ObjectiveHarmonyPatch (>= 1.0.0)
-        - Lib.Harmony (>= 2.2.2)
+- AtsEx.CoreExtensions (1.0.0-rc1)
+- AtsEx.PluginHost (1.0.0-rc5)
 
+(開発者向け)  
+間接参照を含めたすべての依存情報については、各プロジェクトのフォルダにある `packages.lock.json` をご確認ください。
