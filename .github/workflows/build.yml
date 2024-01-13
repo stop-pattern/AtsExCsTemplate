@@ -20,24 +20,20 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Setup MSBuild.exe
-      uses: microsoft/setup-msbuild@v1.3.1
-
-    - name: Setup Nuget
-      uses: NuGet/setup-nuget@v1.2.0
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4.0.0
 
     - name: Restore nuget packages
-      run: nuget restore AtsExCsTemplate.sln
+      run: dotnet restore AtsExCsTemplate.sln --locked-mode
 
     - name: MSBuild
-      run: msbuild AtsExCsTemplate.sln /m /p:configuration="Release" /p:platform="Any CPU" /p:OutputPath="./out/"
-      shell: cmd
+      run: dotnet publish .\AtsExCsTemplate.sln --configuration Release --no-restore /p:platform="Any CPU" /p:OutputPath="./out/"
 
     - name: Collect artifact
       run: |
         ls -alR
         mkdir plugins/
-        find . -type f -path '*/out/*.dll' | xargs mv -t ./plugins/
+        find . -type f -path '*/out/publish/*.dll' | xargs mv -t ./plugins/
       shell: bash
 
     - name: Upload artifact
