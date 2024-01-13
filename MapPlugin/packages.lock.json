@@ -4,18 +4,19 @@
     ".NETFramework,Version=v4.8": {
       "AtsEx.CoreExtensions": {
         "type": "Direct",
-        "requested": "[0.19.0, )",
-        "resolved": "0.19.0",
-        "contentHash": "QH1mmux7O7gthSbE8sMGhgmUtCy4zWeJaOdMaxczy91aft5/k1Y6MvkNRWw8o28gzA7gC3vQwMc0p0fxOpbGDA==",
+        "requested": "[1.0.0-rc1, )",
+        "resolved": "1.0.0-rc1",
+        "contentHash": "9QRYrg1YkAE2q4WsCG5uu71ONZC2xtnC1U4vqkPW4oi9xIf06r+649bVbUEwz7Qzf/a52ooK1ic8Vh3RnBA4zA==",
         "dependencies": {
-          "AtsEx.PluginHost": "0.19.0",
+          "AtsEx.PluginHost": "1.0.0-rc1",
           "ObjectiveHarmonyPatch": "1.0.0"
         }
       },
       "AtsEx.PluginHost": {
-        "type": "Transitive",
-        "resolved": "0.19.0",
-        "contentHash": "yvTShEcmP1+uWh2bqQpAtjGezrSZci+SeSk2B2YzJYXhfZbRY9g0QGnGGk1Oj0e8+UsJWeyey/8g4eSk/kjHEw==",
+        "type": "Direct",
+        "requested": "[1.0.0-rc5, )",
+        "resolved": "1.0.0-rc5",
+        "contentHash": "gI+u2r0EDHc36YoaxNpIJkGh+kFfXO+QO0eGAXwg0lIT6Re2kcocKZ+6Yn6E0rRVFOcpQPjlJ6XId2dWKN89Tw==",
         "dependencies": {
           "Lib.Harmony": "2.2.2",
           "SlimDX": "4.0.13.44",
