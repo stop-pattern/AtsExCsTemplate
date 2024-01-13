@@ -1,6 +1,4 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 
 // アセンブリに関する一般情報は以下を通して制御されます
 // 制御されます。アセンブリに関連付けられている情報を変更するには、
@@ -13,14 +11,6 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-
-// ComVisible を false に設定すると、このアセンブリ内の型は COM コンポーネントから
-// 参照できなくなります。COM からこのアセンブリ内の型にアクセスする必要がある場合は、
-// その型の ComVisible 属性を true に設定してください。
-[assembly: ComVisible(false)]
-
-// このプロジェクトが COM に公開される場合、次の GUID が typelib の ID になります
-[assembly: Guid("b4c723a7-fd6a-4931-b3bf-a6635f44899b")]
 
 // アセンブリのバージョン情報は、以下の 4 つの値で構成されています:
 //

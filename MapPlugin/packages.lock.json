@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "dependencies": {
+    ".NETFramework,Version=v4.8": {
+      "AtsEx.CoreExtensions": {
+        "type": "Direct",
+        "requested": "[0.19.0, )",
+        "resolved": "0.19.0",
+        "contentHash": "QH1mmux7O7gthSbE8sMGhgmUtCy4zWeJaOdMaxczy91aft5/k1Y6MvkNRWw8o28gzA7gC3vQwMc0p0fxOpbGDA==",
+        "dependencies": {
+          "AtsEx.PluginHost": "0.19.0",
+          "ObjectiveHarmonyPatch": "1.0.0"
+        }
+      },
+      "AtsEx.PluginHost": {
+        "type": "Transitive",
+        "resolved": "0.19.0",
+        "contentHash": "yvTShEcmP1+uWh2bqQpAtjGezrSZci+SeSk2B2YzJYXhfZbRY9g0QGnGGk1Oj0e8+UsJWeyey/8g4eSk/kjHEw==",
+        "dependencies": {
+          "Lib.Harmony": "2.2.2",
+          "SlimDX": "4.0.13.44",
+          "UnembeddedResources": "1.0.0"
+        }
+      },
+      "Lib.Harmony": {
+        "type": "Transitive",
+        "resolved": "2.2.2",
+        "contentHash": "70KvWz+DiUELxafsYL/LHxA/jH3PDWeApLo/VwtnrpTvRWQ/eUdPfS/l5funmhZWOy41QXw6UjVv+6C57Nx77A=="
+      },
+      "ObjectiveHarmonyPatch": {
+        "type": "Transitive",
+        "resolved": "1.0.0",
+        "contentHash": "S2BGbjE+8Qt7IK/0+BTOz1h6AgeKr+CkXZMbOqf4zaTzk9YkY7CP1CRBUQshfxp+3VYnHNDya8Ka3LwNNlhUEA==",
+        "dependencies": {
+          "Lib.Harmony": "2.2.2"
+        }
+      },
+      "SlimDX": {
+        "type": "Transitive",
+        "resolved": "4.0.13.44",
+        "contentHash": "Oj8ICZ3tIGvd93s5W6wSWXckDb3payQCo4fWp7GKPwnnGck7wEHHBZwnwfJJTdNb+t+IYr4HJCu07YhZ82xrIg=="
+      },
+      "UnembeddedResources": {
+        "type": "Transitive",
+        "resolved": "1.0.0",
+        "contentHash": "cZJ8PtsQwQ4EzShUiUdKz2blvj/r6v0/Tg5+43SsWBTpHhX79P05Srtu6ypiSPgOKePnpB5D/SM5HCyoaMQN6g=="
+      }
+    }
+  }
+}
