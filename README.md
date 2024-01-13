@@ -27,8 +27,8 @@
 
 ## 依存環境
 
-- AtsEx.CoreExtensions (1.0.0-rc5)
-- AtsEx.PluginHost (1.0.0-rc1)
+- AtsEx.CoreExtensions (1.0.0-rc1)
+- AtsEx.PluginHost (1.0.0-rc5)
 
 間接参照を含めたすべての依存情報については、各プロジェクトのフォルダにある `packages.lock.json` をご確認ください。
 
