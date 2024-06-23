@@ -10,8 +10,10 @@ namespace AtsExCsTemplate.VehiclePlugin
 {
     /// <summary>
     /// プラグインの本体
+    /// Plugin() の第一引数でこのプラグインの仕様を指定
+    /// Plugin() の第二引数でこのプラグインが必要とするAtsEX本体の最低バージョンを指定（オプション）
     /// </summary>
-    [PluginType(PluginType.VehiclePlugin)]
+    [Plugin(PluginType.VehiclePlugin)]
     internal class VehiclePluginMain : AssemblyPluginBase
     {
         /// <summary>
