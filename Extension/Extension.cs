@@ -11,8 +11,10 @@ namespace AtsExCsTemplate.Extension
 {
     /// <summary>
     /// プラグインの本体
+    /// Plugin() の第一引数でこのプラグインの仕様を指定
+    /// Plugin() の第二引数でこのプラグインが必要とするAtsEX本体の最低バージョンを指定（オプション）
     /// </summary>
-    [PluginType(PluginType.Extension)]
+    [Plugin(PluginType.Extension)]
     internal class ExtensionMain : AssemblyPluginBase, IExtension
     {
         /// <summary>

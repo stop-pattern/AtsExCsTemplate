@@ -14,9 +14,9 @@
       },
       "AtsEx.PluginHost": {
         "type": "Direct",
-        "requested": "[1.0.0-rc7, )",
-        "resolved": "1.0.0-rc7",
-        "contentHash": "RcoBit2OpKoQ3JcKx/1VcUc/g7JYWo0wBYPVjVwQHylr4RszMgychgO4RmeKijd//oAzufZ3S9w5nvtzxQ33Bw==",
+        "requested": "[1.0.0-rc8, )",
+        "resolved": "1.0.0-rc8",
+        "contentHash": "W/1suCpKZ0y7E6dl2Y1iY10kJ5D9KD1m3XUWiz3Z1H5NHFcJU32Hz2ON+So9iDUCSIVG0C06RfbsHCpY9x4dvw==",
         "dependencies": {
           "SlimDX": "4.0.13.44",
           "UnembeddedResources": "1.0.0"
