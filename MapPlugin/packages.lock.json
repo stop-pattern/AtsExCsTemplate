@@ -4,9 +4,9 @@
     ".NETFramework,Version=v4.8": {
       "AtsEx.CoreExtensions": {
         "type": "Direct",
-        "requested": "[1.0.0-rc7, )",
-        "resolved": "1.0.0-rc7",
-        "contentHash": "wpQIS8smxANiPt4gBD0LpWa3408wfLVY1gRvJvWeV4OFuIJHXMaTwEZgtpa+UsTmKxfX4S4KbdCCg1xBCDmaWg==",
+        "requested": "[1.0.0-rc9, )",
+        "resolved": "1.0.0-rc9",
+        "contentHash": "b9KGmP9t37+L+9xt2NnI7a/mCh6i8A2Vodx6w/CkwT08bPqe9IsfCt/nSIT0Q8DghTU2nykSN/BBP1TCSH/0ng==",
         "dependencies": {
           "AtsEx.PluginHost": "1.0.0-rc1",
           "ObjectiveHarmonyPatch": "1.1.0"
@@ -14,9 +14,9 @@
       },
       "AtsEx.PluginHost": {
         "type": "Direct",
-        "requested": "[1.0.0-rc8, )",
-        "resolved": "1.0.0-rc8",
-        "contentHash": "W/1suCpKZ0y7E6dl2Y1iY10kJ5D9KD1m3XUWiz3Z1H5NHFcJU32Hz2ON+So9iDUCSIVG0C06RfbsHCpY9x4dvw==",
+        "requested": "[1.0.0-rc9, )",
+        "resolved": "1.0.0-rc9",
+        "contentHash": "UjhPUohYL8hiMCwvJGQ0IZ5ALcgesonhTGMPO9f2ZjbOMLyHtIdPZj3yeqWUxfX4RqkgKwRidvw9G9OQo61BQA==",
         "dependencies": {
           "SlimDX": "4.0.13.44",
           "UnembeddedResources": "1.0.0"
