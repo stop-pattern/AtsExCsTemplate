@@ -10,10 +10,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AtsEx.CoreExtensions" Version="1.0.0-rc7">
+    <PackageReference Include="AtsEx.CoreExtensions" Version="1.0.0-rc9">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="AtsEx.PluginHost" Version="1.0.0-rc8">
+    <PackageReference Include="AtsEx.PluginHost" Version="1.0.0-rc9">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>

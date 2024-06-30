@@ -20,7 +20,7 @@
 
 ## 動作環境
 - [AtsEX](https://github.com/automatic9045/AtsEX)
-    - [ver1.0-RC8 - v1.0.40401.1](https://github.com/automatic9045/AtsEX/releases/tag/v1.0.40401.1) or later
+    - [ver1.0-RC9 - v1.0.40627.1](https://github.com/automatic9045/AtsEX/releases/tag/v1.0.40627.1) or later
 - Win10 22H2, Win11 22H2 or later
     - Visual Studio 2022
         - Microsoft Visual Studio Community 2022 (64 ビット) - Current Version 17.5.3
@@ -29,8 +29,8 @@
 
 
 ## 依存環境
-- [AtsEx.CoreExtensions](https://www.nuget.org/packages/AtsEx.CoreExtensions/) (1.0.0-rc7)
-- [AtsEx.PluginHost](https://www.nuget.org/packages/AtsEx.PluginHost/) (1.0.0-rc8)
+- [AtsEx.CoreExtensions](https://www.nuget.org/packages/AtsEx.CoreExtensions/) (1.0.0-rc9)
+- [AtsEx.PluginHost](https://www.nuget.org/packages/AtsEx.PluginHost/) (1.0.0-rc9)
 
 間接参照を含めたすべての依存情報については、各プロジェクトのフォルダにある `packages.lock.json` をご確認ください。
 
