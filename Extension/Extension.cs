@@ -13,10 +13,23 @@ namespace AtsExCsTemplate.Extension
     /// プラグインの本体
     /// Plugin() の第一引数でこのプラグインの仕様を指定
     /// Plugin() の第二引数でこのプラグインが必要とするAtsEX本体の最低バージョンを指定（オプション）
+    /// Togglable を付加するとユーザーがAtsEXのバージョン一覧から有効・無効を切換できる
     /// </summary>
     [Plugin(PluginType.Extension)]
-    internal class ExtensionMain : AssemblyPluginBase, IExtension
+    [Togglable]
+    internal class ExtensionMain : AssemblyPluginBase, ITogglableExtension, IExtension
     {
+        /// <summary>
+        /// プラグインの有効・無効状態
+        /// </summary>
+        private bool status = true;
+
+        /// <inheritdoc/>
+        public bool IsEnabled
+        {
+            get { return status; }
+            set { status = value; }
+        }
         /// <summary>
         /// プラグインが読み込まれた時に呼ばれる
         /// 初期化を実装する
@@ -40,6 +53,10 @@ namespace AtsExCsTemplate.Extension
         /// <param name="elapsed">前回フレームからの経過時間</param>
         public override TickResult Tick(TimeSpan elapsed)
         {
+            if (status)
+            {
+                // 処理を実装
+            }
             return new ExtensionTickResult();
         }
     }
